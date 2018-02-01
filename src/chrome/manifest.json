@@ -1,0 +1,34 @@
+{
+	"name": "React Performance",
+	"version": "1.0.0",
+	"manifest_version": 2,
+	"description":
+		"A browser developer tools extension, which will help you to inspect the performance of React Js components",
+	"devtools_page": "./devtools/devtools.html",
+	"permissions": ["tabs", "storage"],
+	"options_page": "./options/index.html",
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"icons": {
+		"16": "./icons/react-perftool_16.png",
+		"48": "./icons/react-perftool_48.png",
+		"128": "./icons/react-perftool_128.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "./icons/react-perftool_16.png",
+			"48": "./icons/react-perftool_48.png",
+			"128": "./icons/react-perftool_128.png"
+		}
+	},
+	"content_scripts": [
+		{
+			"run_at": "",
+			"matches": ["http://localhost/*"],
+			"js": ["./content_script/content.js"]
+		}
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"web_accessible_resources": ["content_script/inject.js"]
+}
