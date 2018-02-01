@@ -1,4 +1,5 @@
 // Options.js
+
 function save_options() {
 	var setting_liveMonitoring = document.getElementById("live-monitoring").checked;
 	chrome.storage.sync.set({ "live-monitoring": setting_liveMonitoring }, () => {
