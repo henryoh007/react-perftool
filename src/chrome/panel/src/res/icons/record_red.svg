@@ -1,0 +1,8 @@
+<!-- SVG -->
+<svg fill="#d80000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<filter id="blur-filter" x="-2" y="-2" width="200" height="200">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  <path d="M24 24H0V0h24v24z" fill="none"/>
+    <circle cx="12" cy="12" fill="#d80000" r="8" filter="url(#blur-filter)"/>
+</svg>
