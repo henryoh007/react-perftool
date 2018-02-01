@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import "react-virtualized/styles.css"; // only needs to be imported once
-//asd
+
 import { observer, inject } from "mobx-react";
 
 import DisplayTable from "./components/Table/index";
