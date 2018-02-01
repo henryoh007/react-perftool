@@ -1,4 +1,5 @@
 // Calc
+
 export function unsetAll(name: string) {
 	window.perfTool = {
 		...window.perfTool,
