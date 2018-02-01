@@ -13,7 +13,7 @@
 		"devtool-dev": "parcel watch ./src/chrome/panel/panel.html --out-dir ./extension-build",
 		"lib-dev": "rm -rf ./build && rollup -c -w",
 		"lib-build": "rm -rf ./build && rollup -c",
-		"devtool-build": "parcel build ./src/chrome/panel/panel.html --out-dir ./extension-buil"
+		"devtool-build": "parcel build ./src/chrome/panel/panel.html --out-dir ./extension-build"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.58",
