@@ -22,7 +22,7 @@
 	},
 	"content_scripts": [
 		{
-			"run_at": "",
+			"run_at": "document_start",
 			"matches": ["http://localhost/*"],
 			"js": ["./content_script/content.js"]
 		}
