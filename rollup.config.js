@@ -4,9 +4,9 @@ let override = { compilerOptions: { outDir: "./src/chrome/build" } };
 export default [
 	{
 		output: {
-			file: "./build/lib/react-perftool.js",
+			file: "./build/lib/react-perf-extension.js",
 			format: "umd",
-			name: "ReactPerfTool"
+			name: "ReactPerfToolExtension"
 		},
 		input: "./src/lib/index.ts",
 
@@ -14,4 +14,4 @@ export default [
 	}
 ];
 
-// config file
+// config
