@@ -1,0 +1,50 @@
+// Header.scss
+html,
+body {
+	overflow: hidde;
+}
+
+.manager {
+	height: auto !important;
+	margin: 0px !important;
+}
+.target-container {
+	height: auto !important;
+	margin: 0px !important;
+}
+
+.popover-content {
+	width: auto !important;
+	padding-right: 3px;
+	div {
+		width: auto !important;
+		margin-right: 3px;
+		p {
+			margin: 0px;
+		}
+	}
+}
+
+.react-perftool-header {
+	display: flex;
+	height: 26px;
+	align-items: center;
+	background-color: transparent;
+	border-bottom: 1px solid #dedede;
+	margin: 0px;
+	padding: 0px;
+	flex-wrap: nowrap;
+	div {
+		background-color: #f1f1f1;
+		width: 25px;
+		margin: 3px;
+		text-align: center;
+		margin-right: 0px;
+	}
+	.header-divider {
+		margin-left: 5px;
+		height: 18px;
+		width: 0px;
+		border-left: 1px solid #d8d8d8;
+	}
+}
