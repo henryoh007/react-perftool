@@ -3,17 +3,17 @@
 	"version": "1.0.0",
 	"main": "./build/lib/react-perftool.js",
 	"description":
-		"A browser developer tools extension, which will help you to inspect the performance of React Js components",
+		"A browser developer tools extension, which will help you to inspect the performance of React Js components.",
 	"repository": "https://github.com/vaheqelyan/react-perftool.git",
 	"author": "Vahe <martinkenner@mail.com>",
 	"license": "MIT",
 	"keywords": ["react", "performance", "chrome", "developer tools", "chrome extension"],
 	"scripts": {
 		"test-server": "parcel ./test/index.html -p 80",
-		"devtool-dev": "parcel watch ./src/chrome/panel/panel.html --out-dir ./src/chrome/dist",
+		"devtool-dev": "parcel watch ./src/chrome/panel/panel.html --out-dir ./src/chrome/build",
 		"lib-dev": "rm -rf ./build && rollup -c -w",
 		"lib-build": "rm -rf ./build && rollup -c",
-		"devtool-build": "parcel build ./src/chrome/panel/panel.html --out-dir ./src/chrome/dist"
+		"devtool-build": "parcel build ./src/chrome/panel/panel.html --out-dir ./src/chrome/build"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.58",
