@@ -33,5 +33,5 @@
 		"scripts": ["background.js"]
 	},
 	"web_accessible_resources": ["content_script/inject.js"],
-	"homepage_url": "http://github.com/vaheqelyan/react-perftool"
+	"homepage_url": "https://github.com/vaheqelyan/react-perftool"
 }
