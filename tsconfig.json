@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"module": "umd",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"strictNullChecks": true,
+		"sourceMap": false,
+		"outDir": "./build/lib",
+		"target": "es5",
+		"jsx": "react"
+	},
+	"include": ["src/lib/*", "src/chrome/src/*"],
+	"types": ["chrome"]
+	// asd
+}
