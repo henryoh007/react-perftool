@@ -14,4 +14,4 @@ export default [
 	}
 ];
 
-// config
+// config file
