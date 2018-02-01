@@ -7,7 +7,7 @@
 	"description":
 		"A browser developer tools extension, which will help you to inspect the performance of React Js components",
 	"devtools_page": "./devtools/devtools.html",
-	"permissions": ["tabs", "storage"],
+	"permissions": ["tabs", "storage", "file://*/*"],
 	"options_page": "./options/index.html",
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 	"icons": {
