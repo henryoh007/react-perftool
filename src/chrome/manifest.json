@@ -24,7 +24,7 @@
 	"content_scripts": [
 		{
 			"run_at": "document_start",
-			"matches": ["http://localhost/*"],
+			"matches": ["http://localhost/*", "file://*/*"],
 			"js": ["./content_script/content.js"]
 		}
 	],
