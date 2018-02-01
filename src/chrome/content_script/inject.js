@@ -1,4 +1,5 @@
-// Inject.js
+// Inject
+
 window.doo = function() {
 	window.postMessage(
 		{
