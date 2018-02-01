@@ -6,7 +6,7 @@
 		"A browser developer tools extension, which will help you to inspect the performance of React Js components",
 	"repository": "https://github.com/vaheqelyan/react-perftool.git",
 	"author": "Vahe <martinkenner@mail.com>",
-	"license": "MI",
+	"license": "MIT",
 	"keywords": ["react", "performance", "chrome", "developer tools", "chrome extension"],
 	"scripts": {
 		"test-server": "parcel ./test/index.html -p 80",
