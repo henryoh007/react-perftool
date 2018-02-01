@@ -2,7 +2,6 @@
 	"name": "React Performance",
 	"version": "1.0.0",
 	"manifest_version": 2,
-	"default_locale": "en",
 	"author": "Vahe Araqelyan",
 	"description":
 		"A browser developer tools extension, which will help you to inspect the performance of React Js components",
