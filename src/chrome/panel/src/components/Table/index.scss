@@ -1,0 +1,21 @@
+// Table.scss
+.header {
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.header span {
+	font-size: 10px;
+}
+
+.ReactVirtualized__Table__headerRow {
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.rowHeader:hover {
+	background-color: #e5e5e5;
+}
+.ReactVirtualized__Table__rowColumn:nth-child(5) {
+	color: #7682cf;
+	font-weight: 500;
+}
