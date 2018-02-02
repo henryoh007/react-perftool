@@ -28,6 +28,7 @@ class AppState {
 	}
 
 	sortByName(direction: string) {
+		this.data = orderBy(this.data,['name'],[direction.toLowerCase()])
 		// if (direction == "DESC") {
 		// 	this.data = sortBy(this.data, [o => o.name]);
 		// } else {
