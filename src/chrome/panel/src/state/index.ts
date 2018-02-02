@@ -70,6 +70,11 @@ class AppState {
 		this.time = 0;
 	}
 
+	sortByBool(direction:string):any{
+		const dirValue = direction.toLowerCase();
+		this.arr = orderBy(this.arr,'shouldComponentUpdate',dirValue)
+	}
+
 	constructor() {
 		const self = this;
 		this.clear = this.clear.bind(this);
