@@ -72,7 +72,7 @@ class AppState {
 
 	sortByBool(direction:string):any{
 		const dirValue = direction.toLowerCase();
-		this.arr = orderBy(this.arr,'shouldComponentUpdate',dirValue)
+		this.data = orderBy(this.data,'shouldComponentUpdate',dirValue)
 	}
 
 	constructor() {
