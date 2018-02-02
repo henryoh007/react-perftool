@@ -34,7 +34,6 @@ class AppState {
 		var dirValue = direction.toLowerCase();
 		this.sortBy = 'name';
 		this.direction = dirValue
-		console.log(this.direction,direction)
 		this.data = orderBy(this.data, ['name'], [dirValue])
 	}
 	clear() {
