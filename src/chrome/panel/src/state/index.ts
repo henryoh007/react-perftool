@@ -28,13 +28,13 @@ class AppState {
 	}
 
 	sortByName(direction: string) {
-		if (direction == "DESC") {
-			this.data = sortBy(this.data, [o => o.name]);
-		} else {
-			this.data = this.data.sort(
-				(a: { name: string }, b: { name: string }): any => b.name > a.name
-			);
-		}
+		// if (direction == "DESC") {
+		// 	this.data = sortBy(this.data, [o => o.name]);
+		// } else {
+		// 	this.data = this.data.sort(
+		// 		(a: { name: string }, b: { name: string }): any => b.name > a.name
+		// 	);
+		// }
 	}
 	clear() {
 		this.data.length = 0;
