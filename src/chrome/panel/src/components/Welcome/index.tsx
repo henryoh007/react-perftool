@@ -3,6 +3,8 @@ import * as React from "react";
 import "./index.scss";
 
 export default function Welcome(props) {
+	const fn = () => window.open('https://github.com/vaheqelyan/react-perftool/blob/master/README.md');
+	
 	const Logo = chrome.extension.getURL("./panel/src/res/icons/react-logo.svg");
 	return (
 		<div className="react-perftool-container">
