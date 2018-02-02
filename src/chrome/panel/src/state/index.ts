@@ -19,23 +19,30 @@ class AppState {
 	direction:any = 'asc';
 	sortBy:string = "";
 
+	@computed get dl():number{
+		return this.data.length;
+	}
+
 	sortByNumber(direction: string, name: string) {
-		this.data = this.data.sort((a, b) => {
-			if (name == "Re-rendered") {
-				return direction == "DESC" ? b[name] - a[name] : a[name] - b[name];
-			} else {
-				return direction == "DESC"
-					? b[name].slice(0, -3) - a[name].slice(0, -3)
-					: a[name].slice(0, -3) - b[name].slice(0, -3);
-			}
-		});
+		// this.data = this.data.sort((a, b) => {
+		// 	if (name == "Re-rendered") {
+		// 		return direction == "DESC" ? b[name] - a[name] : a[name] - b[name];
+		// 	} else {
+		// 		return direction == "DESC"
+		// 			? b[name].slice(0, -3) - a[name].slice(0, -3)
+		// 			: a[name].slice(0, -3) - b[name].slice(0, -3);
+		// 	}
+		// });
 	}
 
 	sortByName(direction: string) {
 		// console.log(direction.toLowerCase())
 		this.sortBy = 'name';
 		this.direction = direction.toLowerCase()
-		this.data = orderBy(this.data,['name'],[direction.toLowerCase()])
+		console.log(this.direction,direction)
+		this.data = orderBy(this.data, ['name'], [direction.toLowerCase()])
+		// this.data = orderBy(this.data,['name'],[direction.toLowerCase()])
+		// console.log(orderBy(this.data,['name'],[direction.toLowerCase()]))
 		// if (direction == "DESC") {
 		// 	this.data = sortBy(this.data, [o => o.name]);
 		// } else {
@@ -109,7 +116,7 @@ class AppState {
 						...{ name: value }
 					})
 				);
-				self.data.length = 0;
+				// self.data.length = 0;
 
 				self.data = orderBy(arr,[self.sortBy],[self.direction]);
 			}
