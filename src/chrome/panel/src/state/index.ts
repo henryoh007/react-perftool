@@ -23,7 +23,7 @@ class AppState {
 		return this.data.length;
 	}
 
-	sortByNumber(direction: string, name: string) {
+	sortByNumber(direction: string, name: string):any {
 		var dirValue = direction.toLowerCase();
 		this.sortBy = name;
 		this.direction = dirValue;
