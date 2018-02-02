@@ -42,7 +42,7 @@ export default class App extends React.Component<AppProps, {}> {
 				}
 			} else {
 				if (this.props.monitoring) {
-					res = <><Overlay /><DisplayTable/></>;
+					res = <Overlay/>;
 				} else {
 					if (this.props.dataLength > 0) {
 						res = <DisplayTable />;
