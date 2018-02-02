@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import "react-virtualized/styles.css"; 
+import "react-virtualized/styles.css";
 
 import { observer, inject } from "mobx-react";
 
@@ -18,15 +18,12 @@ interface AppProps {
 }
 
 @inject(({ store }) => ({
-	dataLength:store.dl,
+	dataLength: store.dl,
 	liveMonitoring: store.liveMonitoring,
 	monitoring: store.monitoring
 }))
 @observer
 export default class App extends React.Component<AppProps, {}> {
-	componentDidUpdate(){
-		console.log('updated')
-	}
 	render() {
 		const self = this;
 
@@ -42,7 +39,7 @@ export default class App extends React.Component<AppProps, {}> {
 				}
 			} else {
 				if (this.props.monitoring) {
-					res = <Overlay/>;
+					res = <Overlay />;
 				} else {
 					if (this.props.dataLength > 0) {
 						res = <DisplayTable />;
