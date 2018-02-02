@@ -13,7 +13,7 @@ import { AutoSizer } from "react-virtualized/dist/es/AutoSizer";
 	sortByName: store.sortByName,
 	sortByNumber: store.sortByNumber,
 	sortByBool:store.sortByBool,
-	direction:store.direction
+	direction:store.direction,
 }))
 @observer
 export default class DisplayTable extends React.Component<TableProps, {}> {
