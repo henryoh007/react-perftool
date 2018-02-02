@@ -1,7 +1,6 @@
 // App state -> mobx
 import { observable, computed } from "mobx";
 import * as omit from "lodash.omit";
-import * as sortBy from "lodash.sortby";
 import * as orderBy from "lodash.orderby";
 import { Data, Messages } from "./state.d";
 
@@ -119,7 +118,6 @@ class AppState {
 					} else if(self.sortBy == 'Initial Mount' || self.sortBy == "Update Time"){
 						self.data  = orderBy(arr,item=>parseInt(item[self.sortBy].slice(0,-3)),self.direction);
 					} else {
-						console.log('bool')
 						self.data  = self.sortByBool(self.direction);
 					}
 				} else {
