@@ -71,7 +71,7 @@ export default class DisplayTable extends React.Component<TableProps, {}> {
 						rowGetter={({ index }) => self.props.data[index]}
 					>
 						<Column label="Name" dataKey="name" width={1000} />
-						<Column label="Initial Mount (ms)" dataKey="Initial Mount" width={1000} />
+						<Column label="Mount time (ms)" dataKey="Initial Mount" width={1000} />
 						<Column label="Re-rendered" dataKey="Re-rendered" width={1000} />
 						<Column label="Update Time (ms)" dataKey="Update Time" width={1000} />
 						<Column label="shouldComponentUpdate" dataKey="shouldComponentUpdate" width={1000} />
