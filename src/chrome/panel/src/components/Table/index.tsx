@@ -11,7 +11,8 @@ import { AutoSizer } from "react-virtualized/dist/es/AutoSizer";
 @inject(({ store }) => ({
 	data: store.data,
 	sortByName: store.sortByName,
-	sortByNumber: store.sortByNumber
+	sortByNumber: store.sortByNumber,
+	direction:store.direction
 }))
 @observer
 export default class DisplayTable extends React.Component<TableProps, {}> {
@@ -22,16 +23,17 @@ export default class DisplayTable extends React.Component<TableProps, {}> {
 		super(props);
 
 		this.sortBy = "name";
-		this.sortDirection = SortDirection.ASC;
+		this.sortDirection = 'asc';
+		window.t = this;
 	}
 	componentDidMount() {
 		console.log("mounted");
 	}
 
 	sort(sort: { sortBy: string }) {
-		this.sortDirection == "DESC"
-			? (this.sortDirection = SortDirection.ASC)
-			: (this.sortDirection = SortDirection.DESC);
+		this.sortDirection == "desc"
+			? (this.sortDirection = 'asc')
+			: (this.sortDirection = 'desc');
 
 		this.sortBy = sort.sortBy;
 		if (sort.sortBy == "name") {
@@ -42,6 +44,8 @@ export default class DisplayTable extends React.Component<TableProps, {}> {
 			this.props.sortByNumber(this.sortDirection, "Re-rendered");
 		} else if (sort.sortBy == "Update Time") {
 			this.props.sortByNumber(this.sortDirection, "Update Time");
+		} else {
+			this.props.sortByBool(this.sortDirection);
 		}
 	}
 
@@ -60,7 +64,7 @@ export default class DisplayTable extends React.Component<TableProps, {}> {
 						headerHeight={20}
 						rowHeight={18}
 						sort={this.sort.bind(this)}
-						sortDirection={this.sortDirection}
+						sortDirection={this.sortDirection.toUpperCase()}
 						sortBy={this.sortBy}
 						rowCount={this.props.data.length}
 						rowGetter={({ index }) => self.props.data[index]}
