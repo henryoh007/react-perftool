@@ -12,6 +12,7 @@ import { AutoSizer } from "react-virtualized/dist/es/AutoSizer";
 	data: store.data,
 	sortByName: store.sortByName,
 	sortByNumber: store.sortByNumber,
+	sortByBool:store.sortByBool,
 	direction:store.direction
 }))
 @observer
