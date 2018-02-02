@@ -11,7 +11,7 @@ export default function Welcome(props) {
 				<div>
 					<p>Welcome to React Performance tab.</p>
 					<p>Inspect the performance of React Js components.</p>
-					<p>For more information, go to <span className="github-link">github</span></p>
+					<p>For more information, go to <span onClick={fn} className="github-link">github</span></p>
 				</div>
 			</div>
 		</div>
