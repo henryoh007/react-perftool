@@ -13,30 +13,31 @@ class AppState {
 	port = chrome.runtime.connect({
 		name: "devTool"
 	});
-	direction:any = 'asc';
-	sortBy:string = "";
+	direction: any = "asc";
+	sortBy: string = "";
 
-	@computed get dl():number{
+	@computed
+	get dl(): number {
 		return this.data.length;
 	}
 
-	sortByNumber(direction: string, name: string):any {
+	sortByNumber(direction: string, name: string): any {
 		var dirValue = direction.toLowerCase();
 		this.sortBy = name;
 		this.direction = dirValue;
-		
-		if(name == "Re-rendered"){
-			this.data = orderBy(this.data,'Re-rendered',[dirValue])
+
+		if (name == "Re-rendered") {
+			this.data = orderBy(this.data, "Re-rendered", [dirValue]);
 		} else {
-			this.data = orderBy(this.data,[item=>parseInt(item[name].slice(0, -3))],[dirValue])
+			this.data = orderBy(this.data, [item => parseInt(item[name].slice(0, -3))], [dirValue]);
 		}
 	}
 
 	sortByName(direction: string) {
 		var dirValue = direction.toLowerCase();
-		this.sortBy = 'name';
-		this.direction = dirValue
-		this.data = orderBy(this.data, 'name', [dirValue])
+		this.sortBy = "name";
+		this.direction = dirValue;
+		this.data = orderBy(this.data, "name", [dirValue]);
 	}
 	clear() {
 		this.data.length = 0;
@@ -67,9 +68,9 @@ class AppState {
 		this.time = 0;
 	}
 
-	sortByBool(direction:string):any{
+	sortByBool(direction: string): any {
 		const dirValue = direction.toLowerCase();
-		this.data = orderBy(this.data,'shouldComponentUpdate',dirValue)
+		this.data = orderBy(this.data, "shouldComponentUpdate", dirValue);
 	}
 
 	constructor() {
@@ -110,18 +111,21 @@ class AppState {
 					})
 				);
 
-				if(self.sortBy){
-						if(self.sortBy == 'name' || self.sortBy == 'Re-rendered'){
-						self.data = orderBy(arr,self.sortBy,[self.direction]);
-					} else if(self.sortBy == 'Initial Mount' || self.sortBy == "Update Time"){
-						self.data  = orderBy(arr,item=>parseInt(item[self.sortBy].slice(0,-3)),self.direction);
+				if (self.sortBy) {
+					if (self.sortBy == "name" || self.sortBy == "Re-rendered") {
+						self.data = orderBy(arr, self.sortBy, [self.direction]);
+					} else if (self.sortBy == "Initial Mount" || self.sortBy == "Update Time") {
+						self.data = orderBy(
+							arr,
+							item => parseInt(item[self.sortBy].slice(0, -3)),
+							self.direction
+						);
 					} else {
-						self.data  = self.sortByBool(self.direction);
+						self.data = self.sortByBool(self.direction);
 					}
 				} else {
-					self.data = arr;	
+					self.data = arr;
 				}
-				
 			}
 
 			if (
@@ -143,16 +147,20 @@ class AppState {
 						...{ name: value }
 					})
 				);
-				if(self.sortBy){
-						if(self.sortBy == 'name' || self.sortBy == 'Re-rendered'){
-						self.data = orderBy(arr,self.sortBy,[self.direction]);
-					} else if(self.sortBy == 'Initial Mount' || self.sortBy == "Update Time"){
-						self.data  = orderBy(arr,item=>parseInt(item[self.sortBy].slice(0,-3)),self.direction);
+				if (self.sortBy) {
+					if (self.sortBy == "name" || self.sortBy == "Re-rendered") {
+						self.data = orderBy(arr, self.sortBy, [self.direction]);
+					} else if (self.sortBy == "Initial Mount" || self.sortBy == "Update Time") {
+						self.data = orderBy(
+							arr,
+							item => parseInt(item[self.sortBy].slice(0, -3)),
+							self.direction
+						);
 					} else {
-						self.data  = self.sortByBool(self.direction);
+						self.data = self.sortByBool(self.direction);
 					}
 				} else {
-					self.data = arr;	
+					self.data = arr;
 				}
 			}
 		});
@@ -160,6 +168,5 @@ class AppState {
 }
 
 const store = new AppState();
-
 
 export default store;
