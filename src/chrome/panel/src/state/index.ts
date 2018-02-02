@@ -155,6 +155,6 @@ class AppState {
 }
 
 const store = new AppState();
-window.store = store;
+
 
 export default store;
