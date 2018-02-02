@@ -28936,6 +28936,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
             else if (sort.sortBy == "Update Time") {
                 this.props.sortByNumber(this.sortDirection, "Update Time");
             }
+            else {
+                this.props.sortByBool(this.sortDirection);
+            }
         };
         DisplayTable.prototype.render = function () {
             var _this = this;
@@ -28947,7 +28950,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
                         return self.props.data[index];
                     } },
                     React.createElement(Table_1.Column, { label: "Name", dataKey: "name", width: 1000 }),
-                    React.createElement(Table_1.Column, { label: "Initial Mount (ms)", dataKey: "Initial Mount", width: 1000 }),
+                    React.createElement(Table_1.Column, { label: "Mount Time (ms)", dataKey: "Initial Mount", width: 1000 }),
                     React.createElement(Table_1.Column, { label: "Re-rendered", dataKey: "Re-rendered", width: 1000 }),
                     React.createElement(Table_1.Column, { label: "Update Time (ms)", dataKey: "Update Time", width: 1000 }),
                     React.createElement(Table_1.Column, { label: "shouldComponentUpdate", dataKey: "shouldComponentUpdate", width: 1000 })));
@@ -28960,7 +28963,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
                     data: store.data,
                     sortByName: store.sortByName,
                     sortByNumber: store.sortByNumber,
-                    direction: store.direction
+                    sortByBool: store.sortByBool,
+                    direction: store.direction,
                 });
             }),
             mobx_react_1.observer
@@ -37122,7 +37126,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     var mobx_1 = require("mobx");
     var omit = require("lodash.omit");
     var orderBy = require("lodash.orderby");
-    window.orderBy = orderBy;
     var AppState = (function () {
         function AppState() {
             this.data = [];
@@ -37261,7 +37264,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         return AppState;
     }());
     var store = new AppState();
-    window.store = store;
     exports.default = store;
 });
 
