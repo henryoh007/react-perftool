@@ -29,7 +29,7 @@ class AppState {
 		this.direction = dirValue;
 		
 		if(name == "Re-rendered"){
-			this.data orderBy(this.data,['Re-rendered'],[dirValue])
+			this.data = orderBy(this.data,['Re-rendered'],[dirValue])
 		} else {
 			this.data = orderBy(this.data,[item=>parseInt(item[name].slice(0, -3))],[dirValue])
 		}
