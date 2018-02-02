@@ -77,6 +77,7 @@ class AppState {
 		this.startTimerAndMonitoring = this.startTimerAndMonitoring.bind(this);
 		this.sortByName = this.sortByName.bind(this);
 		this.sortByNumber = this.sortByNumber.bind(this);
+		this.sortByBool = this.sortByBool.bind(this);
 
 		this.port.postMessage({
 			req: "Request for panel settings",
@@ -113,7 +114,7 @@ class AppState {
 					} else if(self.sortBy == 'Initial Mount' || self.sortBy == "Update Time"){
 						self.data  = orderBy(arr,item=>parseInt(item[self.sortBy].slice(0,-3)),self.direction);
 					} else {
-						self.data  = self.sortByBool(self.direction)l
+						self.data  = self.sortByBool(self.direction);
 					}
 				} else {
 					self.data = arr;	
