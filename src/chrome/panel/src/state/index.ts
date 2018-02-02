@@ -2,6 +2,7 @@
 import { observable, computed } from "mobx";
 import * as omit from "lodash.omit";
 import * as sortBy from "lodash.sortby";
+import * as orderBy from "lodash.orderby";
 import { Data, Messages } from "./state.d";
 
 class AppState {
