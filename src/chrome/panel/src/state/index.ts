@@ -24,15 +24,7 @@ class AppState {
 	}
 
 	sortByNumber(direction: string, name: string) {
-		// this.data = this.data.sort((a, b) => {
-		// 	if (name == "Re-rendered") {
-		// 		return direction == "DESC" ? b[name] - a[name] : a[name] - b[name];
-		// 	} else {
-		// 		return direction == "DESC"
-		// 			? b[name].slice(0, -3) - a[name].slice(0, -3)
-		// 			: a[name].slice(0, -3) - b[name].slice(0, -3);
-		// 	}
-		// });
+		
 		var dirValue = direction.toLowerCase();
 		this.sortBy = name;
 		this.direction = dirValue;
