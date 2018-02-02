@@ -37159,13 +37159,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
                             "Update Time": data[value]["Update Time"] + " ms"
                         }), { name: value }));
                     });
-                    if (self.sortBy == 'name' || self.sortBy == 'Re-rendered') {
-                        self.data = orderBy(arr, [self.sortBy], [self.direction]);
-                    }
-                    else if (self.sortBy == 'Initial Mount' || self.sortBy == "Update Time") {
-                        self.data = self.sortByNumber(self.direction, self.sortBy);
+                    if (self.sortBy) {
+                        if (self.sortBy == 'name' || self.sortBy == 'Re-rendered') {
+                            self.data = orderBy(arr, [self.sortBy], [self.direction]);
+                        }
+                        else if (self.sortBy == 'Initial Mount' || self.sortBy == "Update Time") {
+                            self.data = self.sortByNumber(self.direction, self.sortBy);
+                        }
+                        else {
+                        }
                     }
                     else {
+                        self.data = arr;
                     }
                 }
                 if (msg.req === "Reacive the monitoring data" &&
