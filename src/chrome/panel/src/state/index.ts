@@ -4,8 +4,6 @@ import * as omit from "lodash.omit";
 import * as orderBy from "lodash.orderby";
 import { Data, Messages } from "./state.d";
 
-
-
 class AppState {
 	@observable data: Data[] = [];
 	@observable time: number = 0;
