@@ -31,20 +31,11 @@ class AppState {
 	}
 
 	sortByName(direction: string) {
-		// console.log(direction.toLowerCase())
+		var dirValue = direction.toLowerCase();
 		this.sortBy = 'name';
-		this.direction = direction.toLowerCase()
+		this.direction = dirValue
 		console.log(this.direction,direction)
-		this.data = orderBy(this.data, ['name'], [direction.toLowerCase()])
-		// this.data = orderBy(this.data,['name'],[direction.toLowerCase()])
-		// console.log(orderBy(this.data,['name'],[direction.toLowerCase()]))
-		// if (direction == "DESC") {
-		// 	this.data = sortBy(this.data, [o => o.name]);
-		// } else {
-		// 	this.data = this.data.sort(
-		// 		(a: { name: string }, b: { name: string }): any => b.name > a.name
-		// 	);
-		// }
+		this.data = orderBy(this.data, ['name'], [dirValue])
 	}
 	clear() {
 		this.data.length = 0;
