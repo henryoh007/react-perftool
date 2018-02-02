@@ -1,7 +1,7 @@
 {
 	"name": "react-perftool-extension",
 	"version": "1.0.0",
-	"main": "./build/lib/react-perftool-extension.js",
+	"main": "build/lib/react-perftool-extension.js",
 	"description":
 		"A browser developer tools extension, which will help you to inspect the performance of React Js components.",
 	"repository": "https://github.com/vaheqelyan/react-perftool.git",
@@ -15,7 +15,9 @@
 		"lib-dev": "rm -rf ./build && rollup -c -w",
 		"lib-build": "rm -rf ./build && rollup -c",
 		"devtool-build":
-			"parcel build ./src/chrome/panel/panel.html --out-dir ./src/chrome/extension-build"
+			"parcel build ./src/chrome/panel/panel.html --out-dir ./src/chrome/extension-build",
+		"dev": "concurrently \"yarn test-server\" \"yarn devtool-dev\"",
+		"no-server": "parcel watch ./test/index.html"
 	},
 	"devDependencies": {
 		"@types/chrome": "^0.0.58",
@@ -36,6 +38,7 @@
 	},
 	"dependencies": {
 		"lodash.omit": "^4.5.0",
+		"lodash.orderby": "^4.6.0",
 		"lodash.sortby": "^4.7.0",
 		"mobx": "^3.4.1",
 		"mobx-react": "^4.3.5",
