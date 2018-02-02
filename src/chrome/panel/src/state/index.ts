@@ -5,6 +5,8 @@ import * as sortBy from "lodash.sortby";
 import * as orderBy from "lodash.orderby";
 import { Data, Messages } from "./state.d";
 
+window.orderBy = orderBy;
+
 class AppState {
 	@observable data: Data[] = [];
 	@observable time: number = 0;
@@ -14,6 +16,8 @@ class AppState {
 	port = chrome.runtime.connect({
 		name: "devTool"
 	});
+	direction:any = 'asc';
+	sortBy:string = "";
 
 	sortByNumber(direction: string, name: string) {
 		this.data = this.data.sort((a, b) => {
@@ -28,6 +32,9 @@ class AppState {
 	}
 
 	sortByName(direction: string) {
+		// console.log(direction.toLowerCase())
+		this.sortBy = 'name';
+		this.direction = direction.toLowerCase()
 		this.data = orderBy(this.data,['name'],[direction.toLowerCase()])
 		// if (direction == "DESC") {
 		// 	this.data = sortBy(this.data, [o => o.name]);
@@ -103,7 +110,8 @@ class AppState {
 					})
 				);
 				self.data.length = 0;
-				self.data = arr;
+
+				self.data = orderBy(arr,[self.sortBy],[self.direction]);
 			}
 
 			if (
@@ -133,5 +141,6 @@ class AppState {
 }
 
 const store = new AppState();
+window.store = store;
 
 export default store;
