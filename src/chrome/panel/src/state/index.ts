@@ -103,8 +103,12 @@ class AppState {
 					})
 				);
 				// self.data.length = 0;
-
-				self.data = orderBy(arr,[self.sortBy],[self.direction]);
+				if(self.sortBy == 'name' || self.sortBy == 'Re-rendered'){
+					self.data = orderBy(arr,[self.sortBy],[self.direction]);
+				} else {
+					
+				}
+				
 			}
 
 			if (
