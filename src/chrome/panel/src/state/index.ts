@@ -103,13 +103,13 @@ class AppState {
 				);
 				// self.data.length = 0;
 				if(self.sortBy){
-						if(self.sortBy == 'name' || self.sortBy == 'Re-rendered'){
-						self.data = orderBy(arr,[self.sortBy],[self.direction]);
-					} else if(self.sortBy == 'Initial Mount' || self.sortBy == "Update Time"){
-						self.data = self.sortByNumber(self.direction,self.sortBy);
-					} else {
-						// late
-					}
+					// 	if(self.sortBy == 'name' || self.sortBy == 'Re-rendered'){
+					// 	self.data = orderBy(arr,[self.sortBy],[self.direction]);
+					// } else if(self.sortBy == 'Initial Mount' || self.sortBy == "Update Time"){
+					// 	self.data = self.sortByNumber(self.direction,self.sortBy);
+					// } else {
+					// 	// late
+					// }
 				} else {
 					self.data = arr;	
 				}
