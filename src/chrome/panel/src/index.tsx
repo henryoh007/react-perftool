@@ -13,17 +13,20 @@ import { Data } from "./state/state.d";
 
 interface AppProps {
 	readonly monitoring: boolean;
-	readonly data: Data[];
+	readonly dataLength: number;
 	readonly liveMonitoring: boolean;
 }
 
 @inject(({ store }) => ({
-	data: store.data,
+	dataLength:store.dl,
 	liveMonitoring: store.liveMonitoring,
 	monitoring: store.monitoring
 }))
 @observer
 export default class App extends React.Component<AppProps, {}> {
+	componentDidUpdate(){
+		console.log('updated')
+	}
 	render() {
 		const self = this;
 
@@ -32,7 +35,7 @@ export default class App extends React.Component<AppProps, {}> {
 
 		if (this.props.liveMonitoring !== undefined) {
 			if (this.props.liveMonitoring) {
-				if (this.props.data.length > 0) {
+				if (this.props.dataLength > 0) {
 					res = <DisplayTable />;
 				} else {
 					res = <Welcome liveMonitoring={liveMonitoring} />;
@@ -41,7 +44,7 @@ export default class App extends React.Component<AppProps, {}> {
 				if (this.props.monitoring) {
 					res = <Overlay />;
 				} else {
-					if (this.props.data.length > 0) {
+					if (this.props.dataLength > 0) {
 						res = <DisplayTable />;
 					} else {
 						res = <Welcome liveMonitoring={liveMonitoring} />;
@@ -58,3 +61,6 @@ export default class App extends React.Component<AppProps, {}> {
 		);
 	}
 }
+
+// <Header />
+// 				{res}
