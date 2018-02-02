@@ -27,7 +27,12 @@ class AppState {
 		var dirValue = direction.toLowerCase();
 		this.sortBy = name;
 		this.direction = dirValue;
-		this.data = orderBy(this.data,[item=>parseInt(item[name].slice(0, -3))],[dirValue])
+		
+		if(name == "Re-rendered"){
+			this.data orderBy(this.data,['Re-rendered'],[dirValue])
+		} else {
+			this.data = orderBy(this.data,[item=>parseInt(item[name].slice(0, -3))],[dirValue])
+		}
 	}
 
 	sortByName(direction: string) {
@@ -101,7 +106,7 @@ class AppState {
 						...{ name: value }
 					})
 				);
-				
+
 				if(self.sortBy){
 						if(self.sortBy == 'name' || self.sortBy == 'Re-rendered'){
 						self.data = orderBy(arr,[self.sortBy],[self.direction]);
