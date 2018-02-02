@@ -37140,6 +37140,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
             this.startTimerAndMonitoring = this.startTimerAndMonitoring.bind(this);
             this.sortByName = this.sortByName.bind(this);
             this.sortByNumber = this.sortByNumber.bind(this);
+            this.sortByBool = this.sortByBool.bind(this);
             this.port.postMessage({
                 req: "Request for panel settings",
                 from: "devTool"
@@ -37237,6 +37238,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
             clearInterval(this.interval);
             this.monitoring = false;
             this.time = 0;
+        };
+        AppState.prototype.sortByBool = function (direction) {
+            var dirValue = direction.toLowerCase();
+            this.data = orderBy(this.data, 'shouldComponentUpdate', dirValue);
         };
         __decorate([
             mobx_1.observable
