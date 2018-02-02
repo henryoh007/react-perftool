@@ -5,7 +5,7 @@ import * as sortBy from "lodash.sortby";
 import * as orderBy from "lodash.orderby";
 import { Data, Messages } from "./state.d";
 
-window.orderBy = orderBy;
+
 
 class AppState {
 	@observable data: Data[] = [];
