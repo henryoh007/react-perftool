@@ -33,6 +33,10 @@ class AppState {
 		// 			: a[name].slice(0, -3) - b[name].slice(0, -3);
 		// 	}
 		// });
+		var dirValue = direction.toLowerCase();
+		this.sortBy = name;
+		this.direction = dirValue;
+		this.data = orderBy(this.data,[item=>parseInt(item[name].slice(0, -3))],[dirValue])
 	}
 
 	sortByName(direction: string) {
