@@ -105,7 +105,7 @@ class AppState {
 				if(self.sortBy == 'name' || self.sortBy == 'Re-rendered'){
 					self.data = orderBy(arr,[self.sortBy],[self.direction]);
 				} else if(self.sortBy == 'Initial Mount' || self.sortBy == "Update Time"){
-					self.data = orderBy(arr,[item=>parseInt(item[self.sortBy].slice(0,-3))],[self.direction])
+					self.data = self.sortByNumber(self.direction,self.name);
 				} else {
 					// late
 				}
