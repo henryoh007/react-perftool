@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import "react-virtualized/styles.css"; // only needs to be imported once
+import "react-virtualized/styles.css"; 
 
 import { observer, inject } from "mobx-react";
 
@@ -61,6 +61,3 @@ export default class App extends React.Component<AppProps, {}> {
 		);
 	}
 }
-
-// <Header />
-// 				{res}
