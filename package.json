@@ -1,6 +1,6 @@
 {
 	"name": "react-perftool-extension",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"main": "build/lib/react-perftool-extension.js",
 	"description":
 		"A browser developer tools extension, which will help you to inspect the performance of React Js components.",
@@ -28,6 +28,7 @@
 		"material-ui": "^0.20.0",
 		"node-sass": "^4.7.2",
 		"react-addons-css-transition-group": "^15.6.2",
+		"react-perftool-extension": "^1.0.4",
 		"react-redux": "^5.0.6",
 		"react-tap-event-plugin": "^3.0.2",
 		"react-transition-group": "^2.2.1",
@@ -39,9 +40,7 @@
 		"rollup-plugin-replace": "^2.0.0",
 		"rollup-plugin-typescript2": "^0.10.0",
 		"rollup-watch": "^4.3.1",
-		"typescript": "^2.6.2"
-	},
-	"dependencies": {
+		"typescript": "^2.6.2",
 		"lodash.omit": "^4.5.0",
 		"lodash.orderby": "^4.6.0",
 		"mobx": "^3.4.1",
