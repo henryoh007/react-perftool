@@ -1,5 +1,5 @@
 // Inject
-
+console.log(window.perfTool)
 window.doo = function() {
 	window.postMessage(
 		{
