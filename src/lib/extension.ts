@@ -1,9 +1,11 @@
 // Fn
 import { OProps } from "./l.d";
 
-function start(PTOptions: OProps) {
-	if (PTOptions.isDevPanelOpened) {
-		if (PTOptions.LIVE_MONITORING) {
+function start() {
+	// console.log(options);
+	if (options.isDevPanelOpened) {
+		// console.log("ehre");
+		if (options.LIVE_MONITORING) {
 			window.doo();
 		}
 	}
