@@ -35,6 +35,16 @@ or **via YARN**
 yarn add react-perftool-extension --dev
 ```
 
+UMD library exposed as `ReactPerfToolExtension`
+
+```
+https://unpkg.com/react-perftool-extension@latest
+```
+
+```jsx
+const perf = ReactPerfToolExtension;
+```
+
 Then you need to wrap the component and export it,you can use ES7 decorators.
 
 ```jsx
