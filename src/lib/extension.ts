@@ -1,4 +1,4 @@
-// Fn
+// Fn, durty
 import { OProps } from "./l.d";
 
 function start(options: OProps = window.perfTool.options as OProps) {
