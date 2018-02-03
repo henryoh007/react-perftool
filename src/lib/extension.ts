@@ -1,10 +1,8 @@
 // Fn
 import { OProps } from "./l.d";
 
-function start() {
-	// console.log(options);
+function start(options: OProps = window.perfTool.options as OProps) {
 	if (options.isDevPanelOpened) {
-		// console.log("ehre");
 		if (options.LIVE_MONITORING) {
 			window.doo();
 		}
