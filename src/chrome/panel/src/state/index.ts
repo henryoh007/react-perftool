@@ -91,11 +91,7 @@ class AppState {
 				self.liveMonitoring = msg.data["live-monitoring"];
 			}
 
-			if (
-				msg.req === "Reacive performance data" &&
-				msg.from == "background" &&
-				msg.data !== !msg.data
-			) {
+			if (msg.req === "Reacive performance data" && msg.from == "background" && msg.data !== !msg.data) {
 				var data = omit(msg.data, "options");
 				var arr = [];
 				Object.keys(data).map((value, index) =>
@@ -115,11 +111,7 @@ class AppState {
 					if (self.sortBy == "name" || self.sortBy == "Re-rendered") {
 						self.data = orderBy(arr, self.sortBy, [self.direction]);
 					} else if (self.sortBy == "Initial Mount" || self.sortBy == "Update Time") {
-						self.data = orderBy(
-							arr,
-							item => parseInt(item[self.sortBy].slice(0, -3)),
-							self.direction
-						);
+						self.data = orderBy(arr, item => parseInt(item[self.sortBy].slice(0, -3)), self.direction);
 					} else {
 						self.data = self.sortByBool(self.direction);
 					}
@@ -128,11 +120,7 @@ class AppState {
 				}
 			}
 
-			if (
-				msg.req === "Reacive the monitoring data" &&
-				msg.from == "background" &&
-				msg.data !== !msg.data
-			) {
+			if (msg.req === "Reacive the monitoring data" && msg.from == "background" && msg.data !== !msg.data) {
 				var data = omit(msg.data, "options");
 				var arr = [];
 				Object.keys(data).map((value, index) =>
@@ -151,11 +139,7 @@ class AppState {
 					if (self.sortBy == "name" || self.sortBy == "Re-rendered") {
 						self.data = orderBy(arr, self.sortBy, [self.direction]);
 					} else if (self.sortBy == "Initial Mount" || self.sortBy == "Update Time") {
-						self.data = orderBy(
-							arr,
-							item => parseInt(item[self.sortBy].slice(0, -3)),
-							self.direction
-						);
+						self.data = orderBy(arr, item => parseInt(item[self.sortBy].slice(0, -3)), self.direction);
 					} else {
 						self.data = self.sortByBool(self.direction);
 					}
