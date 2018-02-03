@@ -31,7 +31,7 @@ export default function perf(constructor: Function): any {
 				}
 			},
 			options: {
-				LIVE_MONITORING: null,
+				LIVE_MONITORING: false,
 				isDevPanelOpened: false
 			}
 		};
