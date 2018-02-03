@@ -37152,7 +37152,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
                 if (msg.req === "Response for settings data" && msg.from === "background") {
                     self.liveMonitoring = msg.data["live-monitoring"];
                 }
-                if (msg.req === "Reacive performance data" && msg.from == "background" && msg.data !== !msg.data) {
+                if (msg.req === "Reacive performance data" &&
+                    msg.from == "background" &&
+                    msg.data !== !msg.data) {
                     var data = omit(msg.data, "options");
                     var arr = [];
                     Object.keys(data).map(function (value, index) {
@@ -37176,7 +37178,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
                         self.data = arr;
                     }
                 }
-                if (msg.req === "Reacive the monitoring data" && msg.from == "background" && msg.data !== !msg.data) {
+                if (msg.req === "Reacive the monitoring data" &&
+                    msg.from == "background" &&
+                    msg.data !== !msg.data) {
                     var data = omit(msg.data, "options");
                     var arr = [];
                     Object.keys(data).map(function (value, index) {
