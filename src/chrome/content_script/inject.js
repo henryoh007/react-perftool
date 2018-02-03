@@ -23,7 +23,6 @@ function message(event) {
 		doo();
 	}
 	if (message.req === "Prepeare and start for monitoring") {
-		alert("prep");
 		Object.keys(window.perfTool).map((value, index) => {
 			window.perfTool[value]["Re-rendered"] = 0;
 			window.perfTool[value]["Update Time"] = 0;
@@ -56,7 +55,6 @@ function fn() {
 				"*"
 			);
 		};
-		console.log("hha");
 		window.addEventListener("message", message);
 	}
 }
