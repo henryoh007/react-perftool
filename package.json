@@ -1,6 +1,6 @@
 {
 	"name": "react-perftool-extension",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"main": "build/lib/react-perftool-extension.js",
 	"description":
 		"A browser developer tools extension, which will help you to inspect the performance of React Js components.",
