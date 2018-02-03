@@ -77,7 +77,7 @@ export default function perf(constructor: Function): any {
 			t1 = performance.now();
 			setup(name, calc(t1, t0), "Initial Mount");
 
-			start(PTOptions); // Start posting to extension
+			start(); // Start posting to extension
 		};
 	} else {
 		// If not
@@ -86,7 +86,7 @@ export default function perf(constructor: Function): any {
 
 			setup(name, calc(t1, t0), "Initial Mount");
 
-			start(PTOptions); // Start posting to extension
+			start(); // Start posting to extension
 		};
 	}
 
@@ -112,17 +112,15 @@ export default function perf(constructor: Function): any {
 			setup(name, calc(t3, t2), "Update Time");
 
 			setup(name, (window.perfTool[name] as Props)["Re-rendered"] + 1, "Re-rendered");
-
-			start(PTOptions); // Start posting to extension
+			start(); // Start posting to extension
 		};
 	} else {
 		constructor.prototype.componentDidUpdate = () => {
 			t3 = performance.now();
-
 			setup(name, calc(t3, t2), "Update Time");
 			setup(name, (window.perfTool[name] as Props)["Re-rendered"] + 1, "Re-rendered");
 
-			start(PTOptions); // Start posting to extension
+			start(); // Start posting to extension
 		};
 	}
 
@@ -131,12 +129,12 @@ export default function perf(constructor: Function): any {
 			let cwu = componentWillUnmount.bind(this);
 			cwu();
 			unsetAll(name);
-			start(PTOptions); // Start posting to extension
+			start(); // Start posting to extension
 		};
 	} else {
 		constructor.prototype.componentWillUnmount = () => {
 			unsetAll(name);
-			start(PTOptions); // Start posting to extension
+			start(); // Start posting to extension
 		};
 	}
 
