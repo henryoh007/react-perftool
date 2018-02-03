@@ -1,4 +1,4 @@
-// React ** Perf ** Tool
+// React ** Perf ** Tool.
 import { calc, setup, unsetAll } from "./calc";
 
 import start from "./extension";
