@@ -1,4 +1,4 @@
-// Content script,
+// Content script.
 var s = document.createElement("script");
 
 s.src = chrome.extension.getURL("content_script/inject.js");
