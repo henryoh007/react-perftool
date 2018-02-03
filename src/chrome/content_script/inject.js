@@ -1,5 +1,5 @@
 // Inject
-console.log(perfTool,'asdasd')
+
 window.doo = function() {
 	window.postMessage(
 		{
@@ -11,6 +11,8 @@ window.doo = function() {
 		"*"
 	);
 };
+
+console.log(perfTool,'asdasd')
 
 window.addEventListener("message", function(event) {
 	if (event.source !== window) {
