@@ -52,7 +52,7 @@ import React from "react";
 import perf from "react-perftool-extension";
 
 @perf
-export defautl class ClassName extends React.Component {
+export default class ClassName extends React.Component {
   ...
 }
 ```
