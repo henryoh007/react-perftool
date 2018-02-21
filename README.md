@@ -74,6 +74,6 @@ To disable profiling in real time, you need to go to the extension settings pane
 The package stores a global variable in window.
 `window.perfTool`
 
-You also need to set the LIVE_MONITORING property to false.
+You also need to set the `LIVE_MONITORING` property to false.
 
 `window.perfTool.options.LIVE_MONITORING = false;`
