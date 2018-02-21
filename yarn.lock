@@ -1511,18 +1511,9 @@ react-event-listener@^0.5.1:
     prop-types "^15.6.0"
     warning "^3.0.0"
 
-react-perftool-extension@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-perftool-extension/-/react-perftool-extension-1.0.4.tgz#07e5be1d66284edff0a17c3f6e5a7b63f1bba276"
-  dependencies:
-    lodash.omit "^4.5.0"
-    lodash.orderby "^4.6.0"
-    mobx "^3.4.1"
-    mobx-react "^4.3.5"
-    react "^16.2.0"
-    react-awesome-popover "^1.6.3"
-    react-dom "^16.2.0"
-    react-virtualized "^9.18.0"
+react-perftool-extension@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-perftool-extension/-/react-perftool-extension-1.0.5.tgz#337a40e2b07e3e41142d74e60f958a5c790d4304"
 
 react-popper@^0.7.4:
   version "0.7.5"
